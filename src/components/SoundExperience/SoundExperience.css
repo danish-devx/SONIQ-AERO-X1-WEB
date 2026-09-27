@@ -1,28 +1,13 @@
-/* =========================================================
-   SONIQ — SOUND EXPERIENCE
-   Premium editorial audio section
-========================================================= */
-
 .sound-experience {
   position: relative;
   min-height: 100svh;
   width: 100%;
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      180deg,
-      var(--paper) 0%,
-      var(--paper-2) 100%
-    );
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
 
   color: var(--ink);
 }
-
-
-/* =========================================================
-   BACKGROUND NUMBER
-========================================================= */
 
 .sound-bg-number {
   position: absolute;
@@ -40,11 +25,6 @@
   pointer-events: none;
 }
 
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
 .sound-container {
   position: relative;
   z-index: 2;
@@ -56,11 +36,6 @@
 
   padding: 120px 0 70px;
 }
-
-
-/* =========================================================
-   TOP LINE
-========================================================= */
 
 .sound-topline {
   display: flex;
@@ -79,11 +54,6 @@
   color: var(--text-3);
 }
 
-
-/* =========================================================
-   MAIN GRID
-========================================================= */
-
 .sound-grid {
   display: grid;
 
@@ -98,19 +68,9 @@
   min-height: 720px;
 }
 
-
-/* =========================================================
-   CONTENT
-========================================================= */
-
 .sound-content {
   max-width: 600px;
 }
-
-
-/* =========================================================
-   EYEBROW
-========================================================= */
 
 .sound-eyebrow {
   display: flex;
@@ -134,14 +94,8 @@
 
   background: var(--accent);
 
-  box-shadow:
-    0 0 0 4px var(--accent-soft);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
-
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .sound-title {
   margin: 0;
@@ -161,11 +115,6 @@
   color: var(--text-3);
 }
 
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
 .sound-description {
   max-width: 500px;
 
@@ -177,11 +126,6 @@
 
   color: var(--text-2);
 }
-
-
-/* =========================================================
-   SPECS
-========================================================= */
 
 .sound-specs {
   display: flex;
@@ -230,11 +174,6 @@
   background: var(--line-strong);
 }
 
-
-/* =========================================================
-   VISUAL
-========================================================= */
-
 .sound-visual {
   position: relative;
 
@@ -244,11 +183,6 @@
 
   margin-left: auto;
 }
-
-
-/* =========================================================
-   FRAME
-========================================================= */
 
 .sound-frame {
   position: relative;
@@ -261,21 +195,15 @@
 
   border: 1px solid var(--line-strong);
 
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(255, 255, 255, 0.9),
-      rgba(232, 230, 222, 0.35) 55%,
-      rgba(216, 214, 205, 0.2)
-    );
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.9),
+    rgba(232, 230, 222, 0.35) 55%,
+    rgba(216, 214, 205, 0.2)
+  );
 
   box-shadow: var(--shadow-2);
 }
-
-
-/* =========================================================
-   FRAME CORNERS
-========================================================= */
 
 .sound-frame-corner {
   position: absolute;
@@ -331,11 +259,6 @@
   transform: rotate(180deg);
 }
 
-
-/* =========================================================
-   FREQUENCY BARS
-========================================================= */
-
 .sound-bars {
   position: absolute;
 
@@ -361,20 +284,10 @@
 
   transform-origin: center;
 
-  background:
-    linear-gradient(
-      to top,
-      var(--ink),
-      var(--accent)
-    );
+  background: linear-gradient(to top, var(--ink), var(--accent));
 
   border-radius: 999px;
 }
-
-
-/* =========================================================
-   CENTER
-========================================================= */
 
 .sound-center {
   position: absolute;
@@ -407,13 +320,11 @@
 
   border: 1px solid rgba(20, 20, 18, 0.15);
 
-  background:
-    rgba(246, 245, 241, 0.68);
+  background: rgba(246, 245, 241, 0.68);
 
   backdrop-filter: blur(8px);
 
-  box-shadow:
-    0 15px 40px rgba(20, 20, 18, 0.08);
+  box-shadow: 0 15px 40px rgba(20, 20, 18, 0.08);
 }
 
 .sound-center-ring::before {
@@ -468,11 +379,6 @@
   color: var(--text-3);
 }
 
-
-/* =========================================================
-   TECHNICAL LABELS
-========================================================= */
-
 .sound-label {
   position: absolute;
 
@@ -516,11 +422,6 @@
   color: var(--text-3);
 }
 
-
-/* =========================================================
-   VISUAL CAPTION
-========================================================= */
-
 .sound-visual-caption {
   display: flex;
 
@@ -536,11 +437,6 @@
 
   color: var(--text-3);
 }
-
-
-/* =========================================================
-   BOTTOM STATEMENT
-========================================================= */
 
 .sound-bottom {
   display: grid;
@@ -589,13 +485,7 @@
   color: var(--text-3);
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 1000px) {
-
   .sound-container {
     padding-top: 100px;
   }
@@ -625,13 +515,7 @@
   }
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 760px) {
-
   .sound-container {
     width: 90%;
 
@@ -720,13 +604,7 @@
   }
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 420px) {
-
   .sound-container {
     width: 88%;
   }
@@ -774,13 +652,7 @@
   }
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
   .sound-bar {
     animation: none !important;
   }
@@ -803,7 +675,10 @@
   background: rgba(255, 255, 255, 0.38);
   text-align: left;
   cursor: pointer;
-  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease), transform 0.3s var(--ease);
+  transition:
+    border-color 0.3s var(--ease),
+    background-color 0.3s var(--ease),
+    transform 0.3s var(--ease);
 }
 
 .sound-play-button:hover,
@@ -825,6 +700,17 @@
   font-size: 10px;
 }
 
-.sound-play-button > span:nth-child(2) { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-.sound-play-button small { color: var(--text-3); font: 8px var(--font-mono); letter-spacing: 0.1em; }
-.sound-is-playing .sound-bar { animation-play-state: running; }
+.sound-play-button > span:nth-child(2) {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sound-play-button small {
+  color: var(--text-3);
+  font: 8px var(--font-mono);
+  letter-spacing: 0.1em;
+}
+.sound-is-playing .sound-bar {
+  animation-play-state: running;
+}

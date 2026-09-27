@@ -15,7 +15,11 @@ function LoadingScreen({ onComplete }) {
   }, [onComplete]);
 
   return (
-    <div className={`loading-screen${isExiting ? " loading-screen--exiting" : ""}`} aria-label="Loading Soniq Aero X1" role="status">
+    <div
+      className={`loading-screen${isExiting ? " loading-screen--exiting" : ""}`}
+      aria-label="Loading Soniq Aero X1"
+      role="status"
+    >
       <div className="loading-screen__content">
         <div className="loading-screen__brand">
           <span className="loading-screen__mark">S</span>

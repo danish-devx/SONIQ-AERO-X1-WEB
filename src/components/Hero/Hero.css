@@ -1,15 +1,6 @@
-/* /* =========================================================
-   HERO — professional editorial light theme
-   • Lime blob HATAYA → neutral studio-light falloff
-   • Lime sirf hover payoff par (5% rule)
-   • Layered shadows, hairlines, tabular numerals
-   • Class names same — Hero.jsx me koi change nahi
-========================================================= */
-
 .hero {
-  /* Stage — per-colorway subtle shift (JS data-colorway se) */
-  --hero-top: #F7F6F2;
-  --hero-bottom: #F1EFE8;
+  --hero-top: #f7f6f2;
+  --hero-bottom: #f1efe8;
   --light: rgba(255, 255, 255, 0.85);
 
   position: relative;
@@ -18,36 +9,29 @@
   overflow: hidden;
   color: var(--ink);
 
-  /* Neutral studio light — colored blob ki jagah */
   background:
     radial-gradient(1100px 720px at 74% 32%, var(--light), transparent 64%),
     linear-gradient(180deg, var(--hero-top) 0%, var(--hero-bottom) 100%);
   transition: background 0.9s var(--ease);
 }
 
-/* Har colorway ka apna quiet stage — subtle, neutral */
 .hero[data-colorway="obsidian"] {
-  --hero-top: #F3F2EE;
-  --hero-bottom: #ECEAE3;
+  --hero-top: #f3f2ee;
+  --hero-bottom: #eceae3;
   --light: rgba(255, 255, 255, 0.7);
 }
 
 .hero[data-colorway="titanium"] {
-  --hero-top: #F7F6F2;
-  --hero-bottom: #F1EFE8;
+  --hero-top: #f7f6f2;
+  --hero-bottom: #f1efe8;
   --light: rgba(255, 255, 255, 0.85);
 }
 
 .hero[data-colorway="cloud"] {
-  /* White model ko separate karne ke liye thoda deeper */
-  --hero-top: #F2F1EC;
-  --hero-bottom: #E7E5DC;
+  --hero-top: #f2f1ec;
+  --hero-bottom: #e7e5dc;
   --light: rgba(255, 255, 255, 0.5);
 }
-
-/* =========================================================
-   BACKGROUND WORD — outlined editorial watermark
-========================================================= */
 
 .hero-bg-word {
   position: absolute;
@@ -59,18 +43,14 @@
   line-height: 0.75;
   letter-spacing: -0.08em;
 
-  color: rgba(20, 20, 18, 0.018);                       /* fallback fill */
-  -webkit-text-stroke: 1px rgba(20, 20, 18, 0.05);      /* outline */
+  color: rgba(20, 20, 18, 0.018);
+  -webkit-text-stroke: 1px rgba(20, 20, 18, 0.05);
 
   user-select: none;
   pointer-events: none;
   white-space: nowrap;
   z-index: 0;
 }
-
-/* =========================================================
-   MAIN GRID
-========================================================= */
 
 .hero-grid {
   position: relative;
@@ -86,17 +66,11 @@
   padding: 100px 0 60px;
 }
 
-/* =========================================================
-   CONTENT
-========================================================= */
-
 .hero-content {
   position: relative;
   z-index: 5;
   max-width: 650px;
 }
-
-/* ── EYEBROW — ink hairline + chhota lime segment (brand tick) ── */
 
 .hero-eyebrow {
   display: flex;
@@ -117,7 +91,6 @@
   background: var(--line-strong);
 }
 
-/* Lime sirf 10px ka tick — restrained brand signature */
 .hero-eyebrow-line::after {
   content: "";
   position: absolute;
@@ -135,8 +108,6 @@
   font-weight: 500;
 }
 
-/* ── TITLE ── */
-
 .hero-title {
   margin: 0;
   font-size: clamp(4rem, 7vw, 7.8rem);
@@ -150,8 +121,6 @@
   color: var(--text-3);
 }
 
-/* ── DESCRIPTION ── */
-
 .hero-description {
   max-width: 480px;
   margin: 38px 0 0;
@@ -161,10 +130,6 @@
   font-weight: 400;
 }
 
-/* =========================================================
-   ACTIONS
-========================================================= */
-
 .hero-actions {
   display: flex;
   align-items: center;
@@ -172,8 +137,6 @@
   gap: 28px;
   margin-top: 38px;
 }
-
-/* PRIMARY — ink block, arrow chip neutral; lime SIRF hover par */
 
 .hero-primary-btn {
   display: inline-flex;
@@ -184,7 +147,7 @@
   padding: 15px 18px 15px 21px;
 
   background: var(--ink);
-  color: #FCFBF8;
+  color: #fcfbf8;
   text-decoration: none;
 
   font-size: 12px;
@@ -211,10 +174,9 @@
   height: 30px;
   border-radius: 50%;
 
-  /* Pehle lime tha — ab quiet hairline chip */
   border: 1px solid rgba(252, 251, 248, 0.35);
   background: transparent;
-  color: #FCFBF8;
+  color: #fcfbf8;
 
   font-size: 17px;
   transition:
@@ -224,15 +186,12 @@
     color 0.3s var(--ease);
 }
 
-/* Signature payoff: hover par chip lime hota hai */
 .hero-primary-btn:hover .hero-btn-arrow {
   transform: translateX(4px);
   background: var(--accent);
   border-color: var(--accent);
   color: var(--ink);
 }
-
-/* SECONDARY */
 
 .hero-secondary-btn {
   display: inline-flex;
@@ -255,10 +214,6 @@
   border-color: var(--ink);
   opacity: 0.65;
 }
-
-/* =========================================================
-   META — tabular numerals = numbers perfectly align
-========================================================= */
 
 .hero-meta {
   display: flex;
@@ -295,10 +250,6 @@
   background: var(--line);
 }
 
-/* =========================================================
-   VISUAL / MODEL
-========================================================= */
-
 .hero-visual {
   position: relative;
   width: 100%;
@@ -326,8 +277,6 @@
   cursor: grabbing;
 }
 
-/* ── LABELS ── */
-
 .hero-visual-top,
 .hero-visual-bottom {
   position: absolute;
@@ -344,17 +293,17 @@
   color: var(--text-3);
 }
 
-.hero-visual-top { top: 8px; }
-.hero-visual-bottom { bottom: 8px; }
+.hero-visual-top {
+  top: 8px;
+}
+.hero-visual-bottom {
+  bottom: 8px;
+}
 
 .hero-visual-top span:first-child,
 .hero-visual-bottom span:last-child {
   color: rgba(20, 20, 18, 0.28);
 }
-
-/* =========================================================
-   COLOR SELECTOR — matte editorial pill (kam glassy)
-========================================================= */
 
 .hero-color-selector {
   position: absolute;
@@ -401,7 +350,9 @@
     box-shadow 0.25s var(--ease);
 }
 
-.hero-color-btn:hover { transform: scale(1.12); }
+.hero-color-btn:hover {
+  transform: scale(1.12);
+}
 
 .hero-color-btn:focus-visible {
   outline: 2px solid var(--ink);
@@ -410,22 +361,22 @@
 
 .hero-color-btn.active {
   transform: scale(1.15);
-  /* ring-gap current stage color se match karta hai */
+
   box-shadow:
     0 0 0 3px var(--hero-top),
     0 0 0 4.5px var(--ink);
 }
 
 .hero-color-btn.titanium {
-  background: linear-gradient(145deg, #F0EEE6, #AAA69B);
+  background: linear-gradient(145deg, #f0eee6, #aaa69b);
 }
 
 .hero-color-btn.obsidian {
-  background: linear-gradient(145deg, #3A3B40, #0E0E10);
+  background: linear-gradient(145deg, #3a3b40, #0e0e10);
 }
 
 .hero-color-btn.cloud {
-  background: linear-gradient(145deg, #FFFFFF, #C9C6BB);
+  background: linear-gradient(145deg, #ffffff, #c9c6bb);
 }
 
 .hero-color-name {
@@ -436,10 +387,6 @@
   text-transform: uppercase;
   color: var(--text-2);
 }
-
-/* =========================================================
-   SCROLL CUE
-========================================================= */
 
 .hero-scroll {
   position: absolute;
@@ -476,13 +423,14 @@
 }
 
 @keyframes heroScrollSweep {
-  0% { transform: translateX(-100%); }
-  55%, 100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  55%,
+  100% {
+    transform: translateX(100%);
+  }
 }
-
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (max-width: 1000px) {
   .hero-grid {
@@ -491,22 +439,26 @@
     padding: 120px 0 80px;
   }
 
-  .hero-content { max-width: 700px; }
+  .hero-content {
+    max-width: 700px;
+  }
 
-  .hero-title { font-size: clamp(4rem, 12vw, 7rem); }
+  .hero-title {
+    font-size: clamp(4rem, 12vw, 7rem);
+  }
 
   .hero-visual {
     height: 650px;
     min-height: 520px;
   }
 
-  .hero-meta { margin-top: 45px; }
-  .hero-scroll { display: none; }
+  .hero-meta {
+    margin-top: 45px;
+  }
+  .hero-scroll {
+    display: none;
+  }
 }
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 760px) {
   .hero-grid {
@@ -514,8 +466,12 @@
     padding: 90px 0 60px;
   }
 
-  .hero-content { max-width: 100%; }
-  .hero-eyebrow { margin-bottom: 24px; }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-eyebrow {
+    margin-bottom: 24px;
+  }
 
   .hero-title {
     font-size: clamp(3.5rem, 16vw, 5.5rem);
@@ -533,16 +489,24 @@
     margin-top: 30px;
   }
 
-  .hero-primary-btn { min-width: 195px; }
+  .hero-primary-btn {
+    min-width: 195px;
+  }
 
   .hero-meta {
     gap: 16px;
     margin-top: 38px;
   }
 
-  .hero-meta-divider { height: 24px; }
-  .hero-meta-item strong { font-size: 10px; }
-  .hero-meta-item span { font-size: 8px; }
+  .hero-meta-divider {
+    height: 24px;
+  }
+  .hero-meta-item strong {
+    font-size: 10px;
+  }
+  .hero-meta-item span {
+    font-size: 8px;
+  }
 
   .hero-visual {
     height: 500px;
@@ -555,7 +519,9 @@
     bottom: 30px;
   }
 
-  .hero-color-name { display: none; }
+  .hero-color-name {
+    display: none;
+  }
 
   .hero-bg-word {
     top: 40%;
@@ -563,24 +529,24 @@
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 420px) {
   .hero-grid {
     width: 88%;
     padding-top: 80px;
   }
 
-  .hero-title { font-size: 3.5rem; }
+  .hero-title {
+    font-size: 3.5rem;
+  }
 
   .hero-actions {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .hero-meta { gap: 12px; }
+  .hero-meta {
+    gap: 12px;
+  }
 
   .hero-visual {
     height: 430px;
@@ -592,13 +558,13 @@
     font-size: 7px;
   }
 
-  .hero-color-selector { gap: 8px; }
-  .hero-color-label { display: none; }
+  .hero-color-selector {
+    gap: 8px;
+  }
+  .hero-color-label {
+    display: none;
+  }
 }
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .hero *,

@@ -1,10 +1,304 @@
-.battery-section { overflow: hidden; background: var(--ink); color: #f8f7f2; }
-.battery-container { width: 92%; max-width: 1400px; margin: 0 auto; padding: 120px 0 105px; }
-.battery-topline { display: flex; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.45); font-size: 9px; font-weight: 700; letter-spacing: .18em; }
-.battery-heading { display: grid; grid-template-columns: 1fr .75fr; gap: 11vw; align-items: end; padding: 86px 0 72px; }.battery-kicker { margin: 0 0 25px; color: var(--accent); font: 700 10px var(--font-mono); letter-spacing: .15em; }.battery-title { margin: 0; font-size: clamp(3.4rem, 6.5vw, 7rem); line-height: .88; letter-spacing: -.08em; }.battery-title span { color: rgba(255,255,255,.4); }.battery-copy { max-width: 420px; margin: 0 0 8px; color: rgba(255,255,255,.55); line-height: 1.7; }
-.battery-dashboard { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 405px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.035); }.battery-visual { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 405px; padding: 22px; overflow: hidden; border-right: 1px solid rgba(255,255,255,.15); background: radial-gradient(circle at 50% 52%, rgba(184,230,0,.14), transparent 35%); }.battery-visual::before { content: ""; position: absolute; inset: 18%; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; transform: scaleY(.35) rotate(-25deg); }.battery-visual-header, .battery-visual-footer { position: relative; z-index: 2; display: flex; justify-content: space-between; color: rgba(255,255,255,.45); font: 9px var(--font-mono); letter-spacing: .14em; }.battery-visual-header span:last-child { color: var(--accent); }.battery-visual-footer { color: rgba(255,255,255,.38); }
-.battery-orbit { position: relative; display: grid; place-items: center; width: min(24vw, 270px); aspect-ratio: 1; margin: auto; }.battery-orbit-track, .battery-orbit-progress { position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; transform: rotate(-45deg) scaleY(.42); }.battery-orbit-progress { border-color: var(--accent); border-right-color: transparent; border-bottom-color: transparent; transform: rotate(-45deg) scaleY(.42); filter: drop-shadow(0 0 7px rgba(184,230,0,.4)); }.battery-orbit-track::after, .battery-orbit-progress::after { content: ""; position: absolute; inset: 13%; border: 1px solid rgba(255,255,255,.09); border-radius: 50%; }.battery-orbit-core { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }.battery-orbit-core strong { color: var(--accent); font-size: clamp(4rem, 7vw, 6.5rem); line-height: .8; letter-spacing: -.1em; }.battery-orbit-core span { margin-top: 16px; color: rgba(255,255,255,.5); font: 9px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
-.battery-details { display: flex; flex-direction: column; justify-content: space-between; padding: 28px; }.battery-detail-head { display: flex; justify-content: space-between; color: rgba(255,255,255,.5); font: 9px var(--font-mono); letter-spacing: .13em; }.battery-detail-head strong { color: #fff; }.battery-charge-line { display: flex; align-items: center; margin-top: 45px; }.charge-point { width: 9px; height: 9px; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; }.charge-point.active { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 5px rgba(184,230,0,.1); }.charge-line { flex: 1; height: 1px; background: rgba(255,255,255,.2); }.charge-line:nth-of-type(2) { background: linear-gradient(90deg, var(--accent), rgba(255,255,255,.2)); }.battery-charge-labels { display: flex; justify-content: space-between; margin-top: 12px; color: rgba(255,255,255,.4); font: 9px var(--font-mono); }.battery-detail-copy { margin-top: 38px; }.battery-detail-copy strong { font-size: 1.15rem; letter-spacing: -.03em; }.battery-detail-copy p { max-width: 260px; margin: 10px 0 0; color: rgba(255,255,255,.5); font-size: .82rem; line-height: 1.6; }.battery-detail-note { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.42); }.battery-detail-note span { color: var(--accent); font: 9px var(--font-mono); }.battery-detail-note p { margin: 0; font-size: .72rem; line-height: 1.55; }
-.battery-stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.15); }.battery-stats div { display: flex; flex-direction: column; gap: 8px; padding: 25px 0; border-right: 1px solid rgba(255,255,255,.15); }.battery-stats div:not(:first-child) { padding-left: 24px; }.battery-stats strong { font-size: 1.8rem; letter-spacing: -.06em; }.battery-stats strong span { color: var(--accent); font-size: .6em; }.battery-stats div > span { color: rgba(255,255,255,.45); font: 9px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
-@media (max-width: 800px) { .battery-container { padding: 88px 0; }.battery-heading { grid-template-columns: 1fr; gap: 30px; padding: 64px 0 52px; }.battery-dashboard { grid-template-columns: 1fr; }.battery-visual { min-height: 350px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); }.battery-orbit { width: min(54vw, 250px); }.battery-details { min-height: 360px; } }
-@media (max-width: 560px) { .battery-topline { font-size: 8px; }.battery-topline span:last-child { display: none; }.battery-visual { min-height: 300px; padding: 18px; }.battery-details { padding: 22px 18px; }.battery-stats { grid-template-columns: 1fr; }.battery-stats div, .battery-stats div:not(:first-child) { padding: 18px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); }.battery-stats div:last-child { border-bottom: 0; } }
+.battery-section {
+  overflow: hidden;
+  background: var(--ink);
+  color: #f8f7f2;
+}
+.battery-container {
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 0 105px;
+}
+.battery-topline {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+.battery-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 11vw;
+  align-items: end;
+  padding: 86px 0 72px;
+}
+.battery-kicker {
+  margin: 0 0 25px;
+  color: var(--accent);
+  font: 700 10px var(--font-mono);
+  letter-spacing: 0.15em;
+}
+.battery-title {
+  margin: 0;
+  font-size: clamp(3.4rem, 6.5vw, 7rem);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
+}
+.battery-title span {
+  color: rgba(255, 255, 255, 0.4);
+}
+.battery-copy {
+  max-width: 420px;
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+}
+.battery-dashboard {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 405px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.035);
+}
+.battery-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 405px;
+  padding: 22px;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  background: radial-gradient(
+    circle at 50% 52%,
+    rgba(184, 230, 0, 0.14),
+    transparent 35%
+  );
+}
+.battery-visual::before {
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  transform: scaleY(0.35) rotate(-25deg);
+}
+.battery-visual-header,
+.battery-visual-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.45);
+  font: 9px var(--font-mono);
+  letter-spacing: 0.14em;
+}
+.battery-visual-header span:last-child {
+  color: var(--accent);
+}
+.battery-visual-footer {
+  color: rgba(255, 255, 255, 0.38);
+}
+.battery-orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(24vw, 270px);
+  aspect-ratio: 1;
+  margin: auto;
+}
+.battery-orbit-track,
+.battery-orbit-progress {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  transform: rotate(-45deg) scaleY(0.42);
+}
+.battery-orbit-progress {
+  border-color: var(--accent);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-45deg) scaleY(0.42);
+  filter: drop-shadow(0 0 7px rgba(184, 230, 0, 0.4));
+}
+.battery-orbit-track::after,
+.battery-orbit-progress::after {
+  content: "";
+  position: absolute;
+  inset: 13%;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+}
+.battery-orbit-core {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.battery-orbit-core strong {
+  color: var(--accent);
+  font-size: clamp(4rem, 7vw, 6.5rem);
+  line-height: 0.8;
+  letter-spacing: -0.1em;
+}
+.battery-orbit-core span {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font: 9px var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.battery-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+}
+.battery-detail-head {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.5);
+  font: 9px var(--font-mono);
+  letter-spacing: 0.13em;
+}
+.battery-detail-head strong {
+  color: #fff;
+}
+.battery-charge-line {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+}
+.charge-point {
+  width: 9px;
+  height: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+.charge-point.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(184, 230, 0, 0.1);
+}
+.charge-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.charge-line:nth-of-type(2) {
+  background: linear-gradient(90deg, var(--accent), rgba(255, 255, 255, 0.2));
+}
+.battery-charge-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  font: 9px var(--font-mono);
+}
+.battery-detail-copy {
+  margin-top: 38px;
+}
+.battery-detail-copy strong {
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+}
+.battery-detail-copy p {
+  max-width: 260px;
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+.battery-detail-note {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.42);
+}
+.battery-detail-note span {
+  color: var(--accent);
+  font: 9px var(--font-mono);
+}
+.battery-detail-note p {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+.battery-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.battery-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 25px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.battery-stats div:not(:first-child) {
+  padding-left: 24px;
+}
+.battery-stats strong {
+  font-size: 1.8rem;
+  letter-spacing: -0.06em;
+}
+.battery-stats strong span {
+  color: var(--accent);
+  font-size: 0.6em;
+}
+.battery-stats div > span {
+  color: rgba(255, 255, 255, 0.45);
+  font: 9px var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@media (max-width: 800px) {
+  .battery-container {
+    padding: 88px 0;
+  }
+  .battery-heading {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 64px 0 52px;
+  }
+  .battery-dashboard {
+    grid-template-columns: 1fr;
+  }
+  .battery-visual {
+    min-height: 350px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .battery-orbit {
+    width: min(54vw, 250px);
+  }
+  .battery-details {
+    min-height: 360px;
+  }
+}
+@media (max-width: 560px) {
+  .battery-topline {
+    font-size: 8px;
+  }
+  .battery-topline span:last-child {
+    display: none;
+  }
+  .battery-visual {
+    min-height: 300px;
+    padding: 18px;
+  }
+  .battery-details {
+    padding: 22px 18px;
+  }
+  .battery-stats {
+    grid-template-columns: 1fr;
+  }
+  .battery-stats div,
+  .battery-stats div:not(:first-child) {
+    padding: 18px 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .battery-stats div:last-child {
+    border-bottom: 0;
+  }
+}

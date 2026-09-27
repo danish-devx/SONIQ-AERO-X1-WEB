@@ -31,9 +31,9 @@ function App() {
         <ProductIntro />
         <SoundExperience />
         <AdaptiveANC />
+        <ProductShowcase />
         <ComfortDesign />
         <Battery />
-        <ProductShowcase />
         <Specifications />
         <Pricing colorway={colorway} onColorwayChange={setColorway} />
         <FAQ />

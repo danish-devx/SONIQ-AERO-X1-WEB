@@ -111,16 +111,30 @@
 }
 
 @keyframes loading-progress {
-  to { transform: translateX(0); }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes loading-content-in {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .loading-screen { transition: none; }
-  .loading-screen__content { animation: none; }
-  .loading-screen__progress span { animation-duration: 0.01ms; }
+  .loading-screen {
+    transition: none;
+  }
+  .loading-screen__content {
+    animation: none;
+  }
+  .loading-screen__progress span {
+    animation-duration: 0.01ms;
+  }
 }

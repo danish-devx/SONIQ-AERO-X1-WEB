@@ -28,10 +28,14 @@ function Cursor() {
       animationFrame = window.requestAnimationFrame(animateRing);
     };
     const handlePointerOver = (event) => {
-      if (event.target.closest("a, button, input, [data-cursor-hover]")) document.body.classList.add("cursor-hovering");
+      if (event.target.closest("a, button, input, [data-cursor-hover]"))
+        document.body.classList.add("cursor-hovering");
     };
     const handlePointerOut = (event) => {
-      if (!event.relatedTarget?.closest?.("a, button, input, [data-cursor-hover]")) document.body.classList.remove("cursor-hovering");
+      if (
+        !event.relatedTarget?.closest?.("a, button, input, [data-cursor-hover]")
+      )
+        document.body.classList.remove("cursor-hovering");
     };
 
     window.addEventListener("pointermove", handlePointerMove);
@@ -47,7 +51,12 @@ function Cursor() {
     };
   }, []);
 
-  return <><span ref={cursorRef} className="custom-cursor" aria-hidden="true" /><span ref={ringRef} className="custom-cursor-ring" aria-hidden="true" /></>;
+  return (
+    <>
+      <span ref={cursorRef} className="custom-cursor" aria-hidden="true" />
+      <span ref={ringRef} className="custom-cursor-ring" aria-hidden="true" />
+    </>
+  );
 }
 
 export default Cursor;

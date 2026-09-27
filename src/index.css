@@ -1,95 +1,42 @@
 @import "tailwindcss";
-/* 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: #f5f3ed;
-  color: #171717;
-
-  font-family:
-    Inter,
-    Manrope,
-    Arial,
-    sans-serif;
-
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: inherit;
-}
-
-button,
-input {
-  font: inherit;
-} */
-
-
-/* =========================================================
-   SONIQ — DESIGN TOKENS
-   Site-wide professional theme. Har component in vars ko
-   use kare — inconsistent colors kabhi nahi rahenge.
-========================================================= */
-
 :root {
-  /* ── Surfaces (warm, desaturated paper — kam "yellow") ── */
   --paper:    #F6F5F1;
   --paper-2:  #EFEDE6;
   --paper-3:  #E8E6DE;
   --white:    #FFFFFF;
   --dark:     #1B1C19;
 
-  /* ── Ink & text ── */
   --ink:      #141412;
   --ink-soft: #2E2D29;
   --text-2:   #5D5B54;
   --text-3:   #8F8D85;
 
-  /* ── Hairlines (borders sirf itne hi halkе) ── */
   --line:        rgba(20, 20, 18, 0.08);
   --line-strong: rgba(20, 20, 18, 0.18);
 
-  /* ── Accent — 5% rule. Sirf signature moments par. ── */
   --accent:       #B8E600;
   --accent-hover: #A5CF00;
-  --accent-ink:   #7A9800;   /* light bg par lime text chahiye to yeh */
+  --accent-ink:   #7A9800;
   --accent-soft:  rgba(184, 230, 0, 0.14);
 
-  /* ── Layered shadows — yahi "expensive" depth deta hai ── */
   --shadow-1: 0 1px 2px rgba(20, 20, 18, 0.05), 0 2px 8px rgba(20, 20, 18, 0.04);
   --shadow-2: 0 1px 2px rgba(20, 20, 18, 0.05), 0 12px 32px rgba(20, 20, 18, 0.09);
   --shadow-3: 0 2px 4px rgba(20, 20, 18, 0.06), 0 24px 64px rgba(20, 20, 18, 0.14);
 
-  /* ── Radii ── */
   --r-sm: 6px;
   --r-md: 10px;
   --r-lg: 16px;
   --r-pill: 999px;
 
-  /* ── Motion ── */
   --ease:     cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --t-fast: 0.25s;
   --t-med:  0.45s;
 
-  /* ── Type ── */
   --font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
 }
 
-/* =========================================================
-   BASE — ye rules instantly poori site ko lift karte hain
-========================================================= */
-
-/* Agar Lenis/smooth-scroll library use kar rahe ho to ye line HATA dena */
 html { scroll-behavior: smooth; }
 
 section[id] { scroll-margin-top: 88px; }
@@ -135,7 +82,6 @@ a:not(.navbar-cta):not(.hero-primary-btn):not(.showcase-buy):not(.pricing-buy):n
   html { scroll-behavior: auto; }
 }
 
-/* Thin neutral scrollbar — chhoti detail, bada professional feel */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {

@@ -34,7 +34,7 @@ function ProductIntro() {
             opacity: 1,
             duration: 0.7,
             ease: "power3.out",
-          }
+          },
         );
 
         tl.fromTo(
@@ -49,7 +49,7 @@ function ProductIntro() {
             duration: 1,
             ease: "expo.out",
           },
-          "-=0.4"
+          "-=0.4",
         );
 
         tl.fromTo(
@@ -64,7 +64,7 @@ function ProductIntro() {
             duration: 0.8,
             ease: "power3.out",
           },
-          "-=0.55"
+          "-=0.55",
         );
 
         tl.fromTo(
@@ -80,7 +80,7 @@ function ProductIntro() {
             stagger: 0.12,
             ease: "power3.out",
           },
-          "-=0.35"
+          "-=0.35",
         );
 
         tl.fromTo(
@@ -95,7 +95,7 @@ function ProductIntro() {
             duration: 0.7,
             ease: "power3.out",
           },
-          "-=0.3"
+          "-=0.3",
         );
       });
 
@@ -106,74 +106,40 @@ function ProductIntro() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="product-intro"
-      id="technology"
-    >
-      {/* BACKGROUND WATERMARK */}
-      <div
-        className="product-intro-bg-word"
-        aria-hidden="true"
-      >
+    <section ref={sectionRef} className="product-intro" id="technology">
+      <div className="product-intro-bg-word" aria-hidden="true">
         SONIQ
       </div>
 
       <div className="product-intro-container">
-
-        {/* =================================================
-            TOP LABEL
-        ================================================= */}
-
-        <div
-          ref={eyebrowRef}
-          className="product-intro-eyebrow"
-        >
+        <div ref={eyebrowRef} className="product-intro-eyebrow">
           <span className="product-intro-eyebrow-line" />
 
           <span>01 / PRODUCT PHILOSOPHY</span>
 
-          <span className="product-intro-eyebrow-number">
-            AERO X1
-          </span>
+          <span className="product-intro-eyebrow-number">AERO X1</span>
         </div>
 
-
-        {/* =================================================
-            MAIN INTRO
-        ================================================= */}
-
         <div className="product-intro-main">
-
           <div className="product-intro-heading-wrap">
-            <h2
-              ref={titleRef}
-              className="product-intro-title"
-            >
+            <h2 ref={titleRef} className="product-intro-title">
               Built around
               <br />
               <span>silence.</span>
             </h2>
           </div>
 
-
-          <div
-            ref={descriptionRef}
-            className="product-intro-copy"
-          >
-            <div className="product-intro-copy-number">
-              01
-            </div>
+          <div ref={descriptionRef} className="product-intro-copy">
+            <div className="product-intro-copy-number">01</div>
 
             <p>
-              AERO X1 is designed around one simple idea:
-              great sound should feel effortless.
+              AERO X1 is designed around one simple idea: great sound should
+              feel effortless.
             </p>
 
             <p>
-              From adaptive noise cancellation to its
-              precision-tuned acoustic architecture, every
-              element is engineered to remove distractions
+              From adaptive noise cancellation to its precision-tuned acoustic
+              architecture, every element is engineered to remove distractions
               and bring your attention back to what matters.
             </p>
 
@@ -185,28 +151,14 @@ function ProductIntro() {
               PRECISION / COMFORT / CONTROL
             </span>
           </div>
-
         </div>
 
-
-        {/* =================================================
-            ENGINEERING FEATURES
-        ================================================= */}
-
-        <div
-          ref={featuresRef}
-          className="product-intro-features"
-        >
-
-          {/* FEATURE 01 */}
+        <div ref={featuresRef} className="product-intro-features">
           <article className="product-intro-feature">
-
             <div className="product-intro-feature-top">
               <span>01</span>
 
-              <span className="product-intro-feature-mark">
-                ↗
-              </span>
+              <span className="product-intro-feature-mark">↗</span>
             </div>
 
             <div className="product-intro-feature-icon">
@@ -220,23 +172,16 @@ function ProductIntro() {
             </h3>
 
             <p>
-              Intelligent noise cancellation continuously
-              responds to your environment for a quieter,
-              more focused listening experience.
+              Intelligent noise cancellation continuously responds to your
+              environment for a quieter, more focused listening experience.
             </p>
-
           </article>
 
-
-          {/* FEATURE 02 */}
           <article className="product-intro-feature">
-
             <div className="product-intro-feature-top">
               <span>02</span>
 
-              <span className="product-intro-feature-mark">
-                ↗
-              </span>
+              <span className="product-intro-feature-mark">↗</span>
             </div>
 
             <div className="product-intro-feature-icon product-intro-feature-icon--rings">
@@ -250,23 +195,16 @@ function ProductIntro() {
             </h3>
 
             <p>
-              Precision-tuned drivers create a detailed,
-              balanced soundstage designed to keep every
-              layer of your music present.
+              Precision-tuned drivers create a detailed, balanced soundstage
+              designed to keep every layer of your music present.
             </p>
-
           </article>
 
-
-          {/* FEATURE 03 */}
           <article className="product-intro-feature">
-
             <div className="product-intro-feature-top">
               <span>03</span>
 
-              <span className="product-intro-feature-mark">
-                ↗
-              </span>
+              <span className="product-intro-feature-mark">↗</span>
             </div>
 
             <div className="product-intro-feature-icon product-intro-feature-icon--dot">
@@ -280,25 +218,13 @@ function ProductIntro() {
             </h3>
 
             <p>
-              Balanced weight, soft memory cushions and a
-              carefully shaped headband keep AERO X1
-              comfortable from morning to night.
+              Balanced weight, soft memory cushions and a carefully shaped
+              headband keep AERO X1 comfortable from morning to night.
             </p>
-
           </article>
-
         </div>
 
-
-        {/* =================================================
-            SPECIFICATION STRIP
-        ================================================= */}
-
-        <div
-          ref={specRef}
-          className="product-intro-specs"
-        >
-
+        <div ref={specRef} className="product-intro-specs">
           <div className="product-intro-spec">
             <span>DRIVER</span>
             <strong>40MM</strong>
@@ -331,9 +257,7 @@ function ProductIntro() {
             <span>CODEC</span>
             <strong>HI-RES</strong>
           </div>
-
         </div>
-
       </div>
     </section>
   );

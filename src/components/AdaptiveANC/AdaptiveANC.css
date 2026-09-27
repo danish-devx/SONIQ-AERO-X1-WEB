@@ -1,8 +1,3 @@
-/* =========================================================
-   SONIQ AERO X1
-   ADAPTIVE ANC
-========================================================= */
-
 .adaptive-anc {
   position: relative;
 
@@ -17,28 +12,17 @@
   color: var(--ink);
 }
 
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
 .anc-container {
   width: min(1240px, calc(100% - 80px));
 
   margin: 0 auto;
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
-
 .anc-header {
   max-width: 850px;
 
   margin-bottom: 100px;
 }
-
 
 .anc-eyebrow {
   display: inline-flex;
@@ -62,7 +46,6 @@
   color: var(--text-3);
 }
 
-
 .anc-eyebrow::before {
   content: "";
 
@@ -71,7 +54,6 @@
 
   background: var(--accent);
 }
-
 
 .anc-heading {
   margin: 0;
@@ -87,13 +69,11 @@
   font-weight: 500;
 }
 
-
 .anc-heading span {
   display: block;
 
   color: var(--text-3);
 }
-
 
 .anc-intro {
   max-width: 570px;
@@ -107,11 +87,6 @@
   color: var(--text-2);
 }
 
-
-/* =========================================================
-   MAIN
-========================================================= */
-
 .anc-main {
   display: grid;
 
@@ -122,11 +97,6 @@
   gap: 80px;
 }
 
-
-/* =========================================================
-   CONTROL PANEL
-========================================================= */
-
 .anc-controls {
   display: flex;
 
@@ -136,7 +106,6 @@
 
   max-width: 480px;
 }
-
 
 .anc-control-top {
   display: flex;
@@ -149,7 +118,6 @@
 
   border-bottom: 1px solid var(--line);
 }
-
 
 .anc-control-label,
 .anc-control-status {
@@ -164,11 +132,9 @@
   text-transform: uppercase;
 }
 
-
 .anc-control-label {
   color: var(--text-3);
 }
-
 
 .anc-control-status {
   display: flex;
@@ -179,7 +145,6 @@
 
   color: var(--accent-ink);
 }
-
 
 .anc-control-status::before {
   content: "";
@@ -192,17 +157,11 @@
   background: var(--accent);
 }
 
-
-/* =========================================================
-   LEVELS
-========================================================= */
-
 .anc-levels {
   display: flex;
 
   flex-direction: column;
 }
-
 
 .anc-level {
   position: relative;
@@ -239,7 +198,6 @@
     background var(--t-med) var(--ease);
 }
 
-
 .anc-level:hover {
   padding-left: 16px;
 
@@ -248,7 +206,6 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-
 .anc-level.active {
   padding-left: 16px;
 
@@ -256,7 +213,6 @@
 
   background: rgba(255, 255, 255, 0.55);
 }
-
 
 .anc-level.active::before {
   content: "";
@@ -272,7 +228,6 @@
   background: var(--accent);
 }
 
-
 .anc-level-number {
   font-family: var(--font-mono);
 
@@ -280,7 +235,6 @@
 
   color: var(--text-3);
 }
-
 
 .anc-level-info {
   display: flex;
@@ -290,7 +244,6 @@
   gap: 5px;
 }
 
-
 .anc-level-info strong {
   font-size: 17px;
 
@@ -299,13 +252,11 @@
   letter-spacing: -0.02em;
 }
 
-
 .anc-level-info small {
   font-size: 11px;
 
   color: var(--text-3);
 }
-
 
 .anc-level-indicator {
   font-size: 12px;
@@ -313,20 +264,13 @@
   color: var(--text-3);
 }
 
-
 .anc-level.active .anc-level-indicator {
   color: var(--accent-ink);
 }
 
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
 .anc-description {
   padding: 30px 0 0;
 }
-
 
 .anc-description > span {
   font-family: var(--font-mono);
@@ -340,7 +284,6 @@
   color: var(--text-3);
 }
 
-
 .anc-description p {
   max-width: 420px;
 
@@ -352,11 +295,6 @@
 
   color: var(--text-2);
 }
-
-
-/* =========================================================
-   MICRO STATS
-========================================================= */
 
 .anc-micro-stats {
   display: grid;
@@ -372,7 +310,6 @@
   border-top: 1px solid var(--line);
 }
 
-
 .anc-micro-stats div {
   display: flex;
 
@@ -381,7 +318,6 @@
   gap: 8px;
 }
 
-
 .anc-micro-stats strong {
   font-size: 22px;
 
@@ -389,7 +325,6 @@
 
   letter-spacing: -0.03em;
 }
-
 
 .anc-micro-stats span {
   font-family: var(--font-mono);
@@ -405,11 +340,6 @@
   color: var(--text-3);
 }
 
-
-/* =========================================================
-   VISUAL
-========================================================= */
-
 .anc-visual {
   position: relative;
 
@@ -420,20 +350,11 @@
   border: 1px solid var(--line);
 
   background:
-    radial-gradient(
-      circle at center,
-      rgba(184, 230, 0, 0.09),
-      transparent 32%
-    ),
+    radial-gradient(circle at center, rgba(184, 230, 0, 0.09), transparent 32%),
     var(--paper-2);
 
   box-shadow: var(--shadow-2);
 }
-
-
-/* =========================================================
-   VISUAL HEADER / FOOTER
-========================================================= */
 
 .anc-visual-header,
 .anc-visual-footer {
@@ -459,11 +380,9 @@
   color: var(--text-3);
 }
 
-
 .anc-visual-header {
   top: 25px;
 }
-
 
 .anc-visual-footer {
   bottom: 25px;
@@ -473,11 +392,6 @@
   border-top: 1px solid var(--line);
 }
 
-
-/* =========================================================
-   NOISE FIELD
-========================================================= */
-
 .anc-noise-field {
   position: absolute;
 
@@ -485,7 +399,6 @@
 
   pointer-events: none;
 }
-
 
 .anc-noise-dot {
   position: absolute;
@@ -499,7 +412,6 @@
 
   opacity: 0.18;
 }
-
 
 .dot-1 {
   top: 22%;
@@ -541,11 +453,6 @@
   left: 32%;
 }
 
-
-/* =========================================================
-   CENTRAL SYSTEM
-========================================================= */
-
 .anc-system {
   position: absolute;
 
@@ -558,11 +465,6 @@
   transform: translate(-50%, -50%);
 }
 
-
-/* =========================================================
-   ORBIT
-========================================================= */
-
 .anc-orbit {
   position: absolute;
 
@@ -572,7 +474,6 @@
 
   border-radius: 50%;
 }
-
 
 .anc-orbit::before,
 .anc-orbit::after {
@@ -590,18 +491,15 @@
   transform: translate(-50%, -50%);
 }
 
-
 .anc-orbit::before {
   width: 72%;
   height: 72%;
 }
 
-
 .anc-orbit::after {
   width: 48%;
   height: 48%;
 }
-
 
 .anc-orbit span {
   position: absolute;
@@ -613,32 +511,23 @@
 
   background: var(--accent);
 
-  box-shadow:
-    0 0 0 5px rgba(184, 230, 0, 0.12);
+  box-shadow: 0 0 0 5px rgba(184, 230, 0, 0.12);
 }
-
 
 .anc-orbit span:nth-child(1) {
   top: 9%;
   left: 48%;
 }
 
-
 .anc-orbit span:nth-child(2) {
   right: 8%;
   bottom: 28%;
 }
 
-
 .anc-orbit span:nth-child(3) {
   bottom: 8%;
   left: 25%;
 }
-
-
-/* =========================================================
-   WAVE FIELD
-========================================================= */
 
 .anc-wave-field {
   position: absolute;
@@ -662,7 +551,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 .anc-wave-field::before {
   content: "";
 
@@ -675,7 +563,6 @@
   border-radius: 50%;
 }
 
-
 .anc-wave-field::after {
   content: "";
 
@@ -687,7 +574,6 @@
 
   border-radius: 50%;
 }
-
 
 .anc-wave-field span {
   position: relative;
@@ -704,7 +590,6 @@
 
   opacity: 0.55;
 }
-
 
 .anc-wave-field span:nth-child(1) {
   height: 35px;
@@ -729,11 +614,6 @@
 .anc-wave-field span:nth-child(6) {
   height: 20px;
 }
-
-
-/* =========================================================
-   CORE
-========================================================= */
 
 .anc-core {
   position: absolute;
@@ -767,7 +647,6 @@
   z-index: 5;
 }
 
-
 .anc-core-small {
   margin-bottom: 5px;
 
@@ -780,7 +659,6 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-
 .anc-core strong {
   font-size: 31px;
 
@@ -790,7 +668,6 @@
 
   letter-spacing: -0.05em;
 }
-
 
 .anc-core-mode {
   margin-top: 7px;
@@ -806,11 +683,6 @@
   color: var(--accent);
 }
 
-
-/* =========================================================
-   VISUAL LABELS
-========================================================= */
-
 .anc-label {
   position: absolute;
 
@@ -823,7 +695,6 @@
   z-index: 5;
 }
 
-
 .anc-label span {
   font-family: var(--font-mono);
 
@@ -834,7 +705,6 @@
   color: var(--text-3);
 }
 
-
 .anc-label strong {
   font-size: 12px;
 
@@ -843,14 +713,12 @@
   letter-spacing: 0.04em;
 }
 
-
 .anc-label-left {
   top: 50%;
   left: 28px;
 
   transform: translateY(-50%);
 }
-
 
 .anc-label-right {
   top: 50%;
@@ -860,11 +728,6 @@
 
   transform: translateY(-50%);
 }
-
-
-/* =========================================================
-   BOTTOM FEATURES
-========================================================= */
 
 .anc-bottom {
   display: grid;
@@ -878,7 +741,6 @@
   border-bottom: 1px solid var(--line);
 }
 
-
 .anc-bottom-content {
   display: grid;
 
@@ -891,18 +753,15 @@
   border-right: 1px solid var(--line);
 }
 
-
 .anc-bottom-content:first-child {
   padding-left: 0;
 }
-
 
 .anc-bottom-content:last-child {
   padding-right: 0;
 
   border-right: 0;
 }
-
 
 .anc-feature-number {
   font-family: var(--font-mono);
@@ -911,7 +770,6 @@
 
   color: var(--text-3);
 }
-
 
 .anc-bottom-content h3 {
   margin: 0 0 10px;
@@ -922,7 +780,6 @@
 
   letter-spacing: -0.03em;
 }
-
 
 .anc-bottom-content p {
   max-width: 270px;
@@ -936,27 +793,18 @@
   color: var(--text-3);
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 1000px) {
-
   .adaptive-anc {
     padding: 120px 0;
   }
-
 
   .anc-container {
     width: min(100% - 50px, 900px);
   }
 
-
   .anc-header {
     margin-bottom: 75px;
   }
-
 
   .anc-main {
     grid-template-columns: 1fr;
@@ -964,26 +812,21 @@
     gap: 70px;
   }
 
-
   .anc-controls {
     max-width: 650px;
   }
-
 
   .anc-description p {
     max-width: 600px;
   }
 
-
   .anc-visual {
     min-height: 620px;
   }
 
-
   .anc-bottom {
     grid-template-columns: 1fr;
   }
-
 
   .anc-bottom-content,
   .anc-bottom-content:first-child,
@@ -995,34 +838,23 @@
     border-bottom: 1px solid var(--line);
   }
 
-
   .anc-bottom-content:last-child {
     border-bottom: 0;
   }
-
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 600px) {
-
   .adaptive-anc {
     padding: 90px 0 80px;
   }
-
 
   .anc-container {
     width: calc(100% - 32px);
   }
 
-
   .anc-header {
     margin-bottom: 60px;
   }
-
 
   .anc-eyebrow {
     margin-bottom: 18px;
@@ -1030,13 +862,11 @@
     font-size: 9px;
   }
 
-
   .anc-heading {
     font-size: clamp(48px, 15vw, 70px);
 
     letter-spacing: -0.06em;
   }
-
 
   .anc-intro {
     margin-top: 25px;
@@ -1044,11 +874,9 @@
     font-size: 14px;
   }
 
-
   .anc-main {
     gap: 55px;
   }
-
 
   .anc-level {
     grid-template-columns: 30px 1fr 18px;
@@ -1058,37 +886,30 @@
     padding: 21px 5px;
   }
 
-
   .anc-level.active,
   .anc-level:hover {
     padding-left: 12px;
   }
 
-
   .anc-level-info strong {
     font-size: 15px;
   }
-
 
   .anc-level-info small {
     font-size: 10px;
   }
 
-
   .anc-description {
     padding-top: 25px;
   }
-
 
   .anc-micro-stats {
     margin-top: 35px;
   }
 
-
   .anc-visual {
     min-height: 450px;
   }
-
 
   .anc-visual-header,
   .anc-visual-footer {
@@ -1098,59 +919,48 @@
     font-size: 8px;
   }
 
-
   .anc-visual-header {
     top: 18px;
   }
 
-
   .anc-visual-footer {
     bottom: 18px;
   }
-
 
   .anc-system {
     width: 280px;
     height: 280px;
   }
 
-
   .anc-wave-field {
     width: 170px;
     height: 170px;
   }
-
 
   .anc-core {
     width: 105px;
     height: 105px;
   }
 
-
   .anc-core strong {
     font-size: 26px;
   }
-
 
   .anc-label-left {
     left: 15px;
   }
 
-
   .anc-label-right {
     right: 15px;
   }
-
 
   .anc-label strong {
     font-size: 10px;
   }
 
-
   .anc-bottom {
     margin-top: 75px;
   }
-
 
   .anc-bottom-content {
     grid-template-columns: 25px 1fr;
@@ -1158,27 +968,17 @@
     gap: 18px;
   }
 
-
   .anc-bottom-content h3 {
     font-size: 18px;
   }
 
-
   .anc-bottom-content p {
     font-size: 12px;
   }
-
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
   .anc-noise-dot {
     transform: none !important;
   }
-
 }

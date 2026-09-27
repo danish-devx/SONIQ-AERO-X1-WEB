@@ -22,7 +22,10 @@ function Navbar() {
     const sections = ["home", ...navLinks.map((link) => link.href.slice(1))]
       .map((id) => document.getElementById(id))
       .filter(Boolean)
-      .sort((firstSection, secondSection) => firstSection.offsetTop - secondSection.offsetTop);
+      .sort(
+        (firstSection, secondSection) =>
+          firstSection.offsetTop - secondSection.offsetTop,
+      );
     const updateNavigation = () => {
       navbar.classList.toggle("navbar-scrolled", window.scrollY > 30);
 
@@ -34,7 +37,7 @@ function Navbar() {
       });
 
       setActiveSection((previousSection) =>
-        previousSection === currentSection ? previousSection : currentSection
+        previousSection === currentSection ? previousSection : currentSection,
       );
     };
 
@@ -71,7 +74,7 @@ function Navbar() {
           stagger: 0.08,
           delay: 0.15,
           ease: "power3.out",
-        }
+        },
       );
     } else {
       gsap.to(menuRef.current, {
@@ -96,7 +99,9 @@ function Navbar() {
 
     event.preventDefault();
     const top = target.getBoundingClientRect().top + window.scrollY - 88;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     window.history.pushState({}, "", href);
     window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
@@ -107,20 +112,25 @@ function Navbar() {
     <>
       <header ref={navbarRef} className="navbar">
         <div className="navbar-container">
-          {/* Logo */}
-          <a href="#home" className="navbar-logo" aria-label="SONIQ Home" onClick={(event) => handleNavClick(event, "#home")}>
+          <a
+            href="#home"
+            className="navbar-logo"
+            aria-label="SONIQ Home"
+            onClick={(event) => handleNavClick(event, "#home")}
+          >
             <span className="navbar-logo-mark">S</span>
             <span>SONIQ</span>
           </a>
 
-          {/* Desktop Navigation */}
           <nav className="navbar-links" aria-label="Main navigation">
             {navLinks.map((link, index) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(event) => handleNavClick(event, link.href)}
-                className={activeSection === link.href.slice(1) ? "is-active" : ""}
+                className={
+                  activeSection === link.href.slice(1) ? "is-active" : ""
+                }
               >
                 <span className="navbar-link-index">0{index + 1}</span>
                 <span>{link.name}</span>
@@ -128,13 +138,17 @@ function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <a href="#shop" className="navbar-cta" onClick={(event) => handleNavClick(event, "#shop")}>
+          <a
+            href="#shop"
+            className="navbar-cta"
+            onClick={(event) => handleNavClick(event, "#shop")}
+          >
             <span>Get AERO X1</span>
-            <span className="navbar-cta-arrow" aria-hidden="true">↗</span>
+            <span className="navbar-cta-arrow" aria-hidden="true">
+              ↗
+            </span>
           </a>
 
-          {/* Mobile Menu Button */}
           <button
             type="button"
             className={`menu-button ${menuOpen ? "menu-button-active" : ""}`}
@@ -148,8 +162,10 @@ function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Navigation */}
-      <div ref={menuRef} className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`}>
+      <div
+        ref={menuRef}
+        className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`}
+      >
         <div className="mobile-menu-header">
           <span>SONIQ / 2026</span>
           <span>MENU</span>

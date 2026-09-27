@@ -97,9 +97,9 @@ SONIQ AERO X1 is a React product showcase designed around three ideas:
  2. Product philosophy / technology
  3. Sound experience
  4. Adaptive ANC controls
- 5. Comfort design
- 6. Power system and battery
- 7. Product design showcase
+ 5. Product design showcase
+ 6. Comfort design
+ 7. Power system and battery
  8. Technical specifications
  9. Pricing and finish selection
  10. FAQ accordion

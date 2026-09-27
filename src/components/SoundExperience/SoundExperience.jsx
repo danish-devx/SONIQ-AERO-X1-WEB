@@ -1,8 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-// import ScrollTrigger from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
 
 import "./SoundExperience.css";
 
@@ -68,7 +65,8 @@ function SoundExperience() {
   };
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+      return undefined;
     const ctx = gsap.context(() => {
       const bars = visualRef.current.querySelectorAll(".sound-bar");
       const statItems = specsRef.current.querySelectorAll(".sound-spec");
@@ -88,7 +86,7 @@ function SoundExperience() {
             trigger: sectionRef.current,
             start: "top 72%",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -107,7 +105,7 @@ function SoundExperience() {
             trigger: sectionRef.current,
             start: "top 72%",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -126,7 +124,7 @@ function SoundExperience() {
             trigger: specsRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -143,10 +141,9 @@ function SoundExperience() {
             trigger: visualRef.current,
             start: "top 78%",
           },
-        }
+        },
       );
 
-      /* Ambient frequency movement */
       bars.forEach((bar, index) => {
         gsap.to(bar, {
           scaleY: 0.25 + Math.random() * 0.75,
@@ -166,11 +163,10 @@ function SoundExperience() {
   }, []);
 
   const bars = [
-    0.25, 0.42, 0.68, 0.38, 0.78, 0.55, 0.9, 0.45, 0.72,
-    0.96, 0.62, 0.82, 0.48, 0.74, 0.35, 0.66, 0.88, 0.52,
-    0.76, 0.42, 0.92, 0.58, 0.7, 0.38, 0.64, 0.84, 0.48,
-    0.72, 0.56, 0.9, 0.44, 0.68, 0.82, 0.5, 0.74, 0.38,
-    0.62, 0.86, 0.48, 0.7,
+    0.25, 0.42, 0.68, 0.38, 0.78, 0.55, 0.9, 0.45, 0.72, 0.96, 0.62, 0.82, 0.48,
+    0.74, 0.35, 0.66, 0.88, 0.52, 0.76, 0.42, 0.92, 0.58, 0.7, 0.38, 0.64, 0.84,
+    0.48, 0.72, 0.56, 0.9, 0.44, 0.68, 0.82, 0.5, 0.74, 0.38, 0.62, 0.86, 0.48,
+    0.7,
   ];
 
   return (
@@ -179,25 +175,18 @@ function SoundExperience() {
       className={`sound-experience ${isPlaying ? "sound-is-playing" : ""}`}
       id="experience"
     >
-      {/* Background editorial number */}
       <div className="sound-bg-number" aria-hidden="true">
         02
       </div>
 
       <div className="sound-container">
-
-        {/* TOP LABEL */}
         <div className="sound-topline">
           <span>02 / SOUND EXPERIENCE</span>
           <span>ENGINEERED FOR IMMERSION</span>
         </div>
 
-        {/* MAIN CONTENT */}
         <div className="sound-grid">
-
-          {/* LEFT */}
           <div className="sound-content">
-
             <div className="sound-eyebrow">
               <span className="sound-eyebrow-dot" />
               PRECISION AUDIO
@@ -209,14 +198,10 @@ function SoundExperience() {
               <span>without limits.</span>
             </h2>
 
-            <p
-              ref={descriptionRef}
-              className="sound-description"
-            >
-              Every frequency is shaped with precision. AERO X1
-              combines powerful 40mm drivers with intelligent
-              processing to create sound that feels wider,
-              deeper and remarkably natural.
+            <p ref={descriptionRef} className="sound-description">
+              Every frequency is shaped with precision. AERO X1 combines
+              powerful 40mm drivers with intelligent processing to create sound
+              that feels wider, deeper and remarkably natural.
             </p>
 
             <button
@@ -225,14 +210,18 @@ function SoundExperience() {
               onClick={toggleSound}
               aria-pressed={isPlaying}
             >
-              <span className="sound-play-icon" aria-hidden="true">{isPlaying ? "■" : "▶"}</span>
-              <span>{isPlaying ? "Pause sound profile" : "Play sound profile"}</span>
-              <small>{isPlaying ? "06 SEC / PLAYING" : "USER INITIATED / 06 SEC"}</small>
+              <span className="sound-play-icon" aria-hidden="true">
+                {isPlaying ? "■" : "▶"}
+              </span>
+              <span>
+                {isPlaying ? "Pause sound profile" : "Play sound profile"}
+              </span>
+              <small>
+                {isPlaying ? "06 SEC / PLAYING" : "USER INITIATED / 06 SEC"}
+              </small>
             </button>
 
-            {/* SPECS */}
             <div ref={specsRef} className="sound-specs">
-
               <div className="sound-spec">
                 <strong>40mm</strong>
                 <span>Custom Drivers</span>
@@ -251,26 +240,16 @@ function SoundExperience() {
                 <strong>360°</strong>
                 <span>Spatial Sound</span>
               </div>
-
             </div>
-
           </div>
 
-          {/* RIGHT VISUAL */}
-          <div
-            ref={visualRef}
-            className="sound-visual"
-          >
-
-            {/* Visual frame */}
+          <div ref={visualRef} className="sound-visual">
             <div className="sound-frame">
-
               <div className="sound-frame-corner top-left" />
               <div className="sound-frame-corner top-right" />
               <div className="sound-frame-corner bottom-left" />
               <div className="sound-frame-corner bottom-right" />
 
-              {/* Frequency bars */}
               <div className="sound-bars">
                 {bars.map((height, index) => (
                   <span
@@ -283,9 +262,7 @@ function SoundExperience() {
                 ))}
               </div>
 
-              {/* Center logo */}
               <div className="sound-center">
-
                 <div className="sound-center-ring">
                   <span>SONIQ</span>
                 </div>
@@ -295,53 +272,31 @@ function SoundExperience() {
                   <br />
                   IMMERSION
                 </small>
-
               </div>
 
-              {/* Technical labels */}
-              <span className="sound-label sound-label-top">
-                LOW
-              </span>
+              <span className="sound-label sound-label-top">LOW</span>
 
-              <span className="sound-label sound-label-mid">
-                MID
-              </span>
+              <span className="sound-label sound-label-mid">MID</span>
 
-              <span className="sound-label sound-label-bottom">
-                HIGH
-              </span>
+              <span className="sound-label sound-label-bottom">HIGH</span>
 
-              <span className="sound-frequency">
-                20Hz — 40kHz
-              </span>
-
+              <span className="sound-frequency">20Hz — 40kHz</span>
             </div>
 
-            {/* Visual caption */}
             <div className="sound-visual-caption">
               <span>SONIQ AERO ENGINE</span>
               <span>01.04 / AUDIO</span>
             </div>
-
           </div>
-
         </div>
 
-        {/* BOTTOM STATEMENT */}
         <div className="sound-bottom">
-
           <span className="sound-bottom-line" />
 
-          <p>
-            Engineered to make every detail audible.
-          </p>
+          <p>Engineered to make every detail audible.</p>
 
-          <span className="sound-bottom-number">
-            40MM
-          </span>
-
+          <span className="sound-bottom-number">40MM</span>
         </div>
-
       </div>
     </section>
   );
