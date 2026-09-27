@@ -1,0 +1,830 @@
+/* =========================================================
+   SONIQ — SOUND EXPERIENCE
+   Premium editorial audio section
+========================================================= */
+
+.sound-experience {
+  position: relative;
+  min-height: 100svh;
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--paper) 0%,
+      var(--paper-2) 100%
+    );
+
+  color: var(--ink);
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+========================================================= */
+
+.sound-bg-number {
+  position: absolute;
+  right: -1vw;
+  top: 4%;
+
+  font-size: clamp(16rem, 32vw, 34rem);
+  line-height: 0.75;
+  font-weight: 900;
+  letter-spacing: -0.09em;
+
+  color: rgba(20, 20, 18, 0.018);
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.sound-container {
+  position: relative;
+  z-index: 2;
+
+  width: 92%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 120px 0 70px;
+}
+
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.sound-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--line);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--text-3);
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.sound-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: clamp(50px, 8vw, 130px);
+
+  align-items: center;
+
+  min-height: 720px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sound-content {
+  max-width: 600px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.sound-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 28px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  color: var(--text-3);
+}
+
+.sound-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 0 4px var(--accent-soft);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.sound-title {
+  margin: 0;
+
+  font-size: clamp(4rem, 7vw, 7.2rem);
+
+  line-height: 0.88;
+
+  letter-spacing: -0.075em;
+
+  font-weight: 800;
+
+  color: var(--ink);
+}
+
+.sound-title span {
+  color: var(--text-3);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.sound-description {
+  max-width: 500px;
+
+  margin: 38px 0 0;
+
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
+
+  line-height: 1.75;
+
+  color: var(--text-2);
+}
+
+
+/* =========================================================
+   SPECS
+========================================================= */
+
+.sound-specs {
+  display: flex;
+  align-items: center;
+
+  margin-top: 60px;
+
+  gap: 28px;
+}
+
+.sound-spec {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.sound-spec strong {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  color: var(--ink);
+
+  font-variant-numeric: tabular-nums;
+}
+
+.sound-spec span {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: var(--text-3);
+}
+
+.sound-spec-divider {
+  width: 1px;
+  height: 38px;
+
+  background: var(--line-strong);
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.sound-visual {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 700px;
+
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   FRAME
+========================================================= */
+
+.sound-frame {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 0.78;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line-strong);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.9),
+      rgba(232, 230, 222, 0.35) 55%,
+      rgba(216, 214, 205, 0.2)
+    );
+
+  box-shadow: var(--shadow-2);
+}
+
+
+/* =========================================================
+   FRAME CORNERS
+========================================================= */
+
+.sound-frame-corner {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  z-index: 5;
+}
+
+.sound-frame-corner::before,
+.sound-frame-corner::after {
+  content: "";
+
+  position: absolute;
+
+  background: var(--ink);
+}
+
+.sound-frame-corner::before {
+  width: 18px;
+  height: 1px;
+}
+
+.sound-frame-corner::after {
+  width: 1px;
+  height: 18px;
+}
+
+.top-left {
+  left: -1px;
+  top: -1px;
+}
+
+.top-right {
+  right: -1px;
+  top: -1px;
+
+  transform: rotate(90deg);
+}
+
+.bottom-left {
+  left: -1px;
+  bottom: -1px;
+
+  transform: rotate(-90deg);
+}
+
+.bottom-right {
+  right: -1px;
+  bottom: -1px;
+
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   FREQUENCY BARS
+========================================================= */
+
+.sound-bars {
+  position: absolute;
+
+  inset: 15% 7%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 5px;
+
+  opacity: 0.65;
+}
+
+.sound-bar {
+  display: block;
+
+  width: 2px;
+
+  min-height: 8px;
+
+  transform-origin: center;
+
+  background:
+    linear-gradient(
+      to top,
+      var(--ink),
+      var(--accent)
+    );
+
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.sound-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 15px;
+
+  z-index: 3;
+}
+
+.sound-center-ring {
+  position: relative;
+
+  width: 170px;
+  height: 170px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(20, 20, 18, 0.15);
+
+  background:
+    rgba(246, 245, 241, 0.68);
+
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 15px 40px rgba(20, 20, 18, 0.08);
+}
+
+.sound-center-ring::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 13px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(20, 20, 18, 0.08);
+}
+
+.sound-center-ring::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  top: 19px;
+  right: 42px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+}
+
+.sound-center-ring span {
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  color: var(--ink);
+}
+
+.sound-center small {
+  font-size: 8px;
+
+  line-height: 1.6;
+
+  text-align: center;
+
+  letter-spacing: 0.2em;
+
+  font-weight: 700;
+
+  color: var(--text-3);
+}
+
+
+/* =========================================================
+   TECHNICAL LABELS
+========================================================= */
+
+.sound-label {
+  position: absolute;
+
+  left: 16px;
+
+  font-size: 8px;
+
+  font-family: var(--font-mono);
+
+  letter-spacing: 0.1em;
+
+  color: var(--text-3);
+
+  writing-mode: vertical-rl;
+}
+
+.sound-label-top {
+  top: 18%;
+}
+
+.sound-label-mid {
+  top: 46%;
+}
+
+.sound-label-bottom {
+  bottom: 18%;
+}
+
+.sound-frequency {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  font-family: var(--font-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-3);
+}
+
+
+/* =========================================================
+   VISUAL CAPTION
+========================================================= */
+
+.sound-visual-caption {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 14px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: var(--text-3);
+}
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+========================================================= */
+
+.sound-bottom {
+  display: grid;
+
+  grid-template-columns: 70px 1fr auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 40px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid var(--line);
+}
+
+.sound-bottom-line {
+  width: 55px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+.sound-bottom p {
+  margin: 0;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--text-2);
+}
+
+.sound-bottom-number {
+  font-family: var(--font-mono);
+
+  font-size: 10px;
+
+  letter-spacing: 0.1em;
+
+  color: var(--text-3);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .sound-container {
+    padding-top: 100px;
+  }
+
+  .sound-grid {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    gap: 70px;
+
+    padding-top: 70px;
+  }
+
+  .sound-content {
+    max-width: 720px;
+  }
+
+  .sound-visual {
+    max-width: 760px;
+
+    margin: 0 auto;
+  }
+
+  .sound-title {
+    font-size: clamp(4rem, 11vw, 7rem);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .sound-container {
+    width: 90%;
+
+    padding: 80px 0 50px;
+  }
+
+  .sound-topline {
+    font-size: 8px;
+  }
+
+  .sound-topline span:last-child {
+    display: none;
+  }
+
+  .sound-grid {
+    gap: 50px;
+
+    padding-top: 55px;
+  }
+
+  .sound-eyebrow {
+    margin-bottom: 22px;
+  }
+
+  .sound-title {
+    font-size: clamp(3.5rem, 16vw, 5.5rem);
+  }
+
+  .sound-description {
+    margin-top: 28px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+  .sound-specs {
+    margin-top: 42px;
+
+    gap: 16px;
+
+    justify-content: space-between;
+  }
+
+  .sound-spec strong {
+    font-size: 18px;
+  }
+
+  .sound-spec span {
+    font-size: 7px;
+  }
+
+  .sound-frame {
+    aspect-ratio: 1 / 1;
+  }
+
+  .sound-center-ring {
+    width: 140px;
+    height: 140px;
+  }
+
+  .sound-center-ring span {
+    font-size: 15px;
+  }
+
+  .sound-bars {
+    inset: 13% 8%;
+  }
+
+  .sound-bottom {
+    grid-template-columns: 45px 1fr auto;
+
+    gap: 12px;
+
+    margin-top: 30px;
+  }
+
+  .sound-bottom p {
+    font-size: 8px;
+
+    line-height: 1.5;
+  }
+
+  .sound-bottom-number {
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .sound-container {
+    width: 88%;
+  }
+
+  .sound-topline {
+    letter-spacing: 0.12em;
+  }
+
+  .sound-title {
+    font-size: 3.5rem;
+  }
+
+  .sound-specs {
+    gap: 10px;
+  }
+
+  .sound-spec strong {
+    font-size: 16px;
+  }
+
+  .sound-spec span {
+    font-size: 6.5px;
+  }
+
+  .sound-spec-divider {
+    height: 30px;
+  }
+
+  .sound-center-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sound-center-ring span {
+    font-size: 13px;
+  }
+
+  .sound-center small {
+    font-size: 6px;
+  }
+
+  .sound-frequency {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .sound-bar {
+    animation: none !important;
+  }
+
+  .sound-experience * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.sound-play-button {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  gap: 2px 12px;
+  width: min(100%, 330px);
+  margin-top: 32px;
+  padding: 12px 14px 12px 12px;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.38);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.sound-play-button:hover,
+.sound-play-button[aria-pressed="true"] {
+  border-color: var(--accent-ink);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+.sound-play-icon {
+  display: grid;
+  grid-row: span 2;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--accent);
+  font-size: 10px;
+}
+
+.sound-play-button > span:nth-child(2) { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.sound-play-button small { color: var(--text-3); font: 8px var(--font-mono); letter-spacing: 0.1em; }
+.sound-is-playing .sound-bar { animation-play-state: running; }

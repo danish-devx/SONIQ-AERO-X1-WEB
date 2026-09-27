@@ -1,0 +1,13 @@
+.custom-cursor, .custom-cursor-ring { position: fixed; top: 0; left: 0; z-index: 2000; pointer-events: none; opacity: 0; transform: translate(-50%, -50%); }
+.custom-cursor { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.custom-cursor-ring { width: 30px; height: 30px; border: 1px solid rgba(20,20,18,.55); border-radius: 50%; transition: width .3s var(--ease-out), height .3s var(--ease-out), background-color .3s ease, border-color .3s ease; }
+@media (pointer: fine) {
+  body { cursor: none; }
+  a, button, input { cursor: none; }
+  .custom-cursor, .custom-cursor-ring { opacity: 1; }
+  body.cursor-hovering .custom-cursor { transform: translate(-50%, -50%) scale(.55); }
+  body.cursor-hovering .custom-cursor-ring { width: 52px; height: 52px; border-color: var(--accent-ink); background: var(--accent-soft); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor-ring { transition: none; }
+}

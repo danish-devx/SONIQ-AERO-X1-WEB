@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- SONIQ "S." mark — Silence. Refined. -->
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .sq { fill: #F6F5F1; }
+      .sm { stroke: #171717; }
+    }
+  </style>
+
+  <rect class="sq" width="64" height="64" rx="14" fill="#171717"/>
+
+  <path class="sm"
+        d="M41 17H27a7.5 7.5 0 0 0 0 15h4a7.5 7.5 0 0 1 0 15H17"
+        fill="none" stroke="#B8E600" stroke-width="7"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="48.5" cy="46" r="4.5" fill="#B8E600"/>
+</svg>

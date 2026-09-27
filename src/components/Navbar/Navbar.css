@@ -1,0 +1,48 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 22px 0;
+  transition: padding 0.4s ease;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: min(92%, 1400px);
+  margin: 0 auto;
+  padding: 0 6px 0 16px;
+  border: 1px solid transparent;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+}
+
+.navbar-logo { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.16em; }
+.navbar-logo-mark { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; color: var(--ink); background: var(--accent); font-size: 0.75rem; letter-spacing: 0; }
+.navbar-links { display: flex; align-items: center; gap: 4px; margin-left: auto; margin-right: clamp(24px, 5vw, 76px); }
+.navbar-links a { position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 9px 13px; color: var(--text-2); text-decoration: none; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s ease; }
+.navbar-links a::after { content: ""; position: absolute; right: 13px; bottom: 3px; left: 13px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform 0.35s ease; }
+.navbar-links a:hover, .navbar-links a.is-active { color: var(--ink); }
+.navbar-links a:hover::after, .navbar-links a.is-active::after { transform: scaleX(1); transform-origin: left; }
+.navbar-link-index { color: var(--text-3); font-family: var(--font-mono); font-size: 0.55rem; }
+.navbar-cta { display: flex; align-items: center; gap: 12px; padding: 10px 13px 10px 16px; border: 1px solid var(--accent); border-radius: var(--r-pill); color: var(--ink); background: var(--accent); text-decoration: none; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: transform 0.3s ease, background-color 0.3s ease; }
+.navbar-cta:hover { transform: translateY(-2px); background: var(--accent-hover); }
+.navbar-cta-arrow { font-size: 1rem; transition: transform 0.3s ease; }
+.navbar-cta:hover .navbar-cta-arrow { transform: translate(2px, -2px); }
+.navbar-scrolled { padding: 12px 0; }
+.navbar-scrolled .navbar-container { padding-top: 5px; padding-bottom: 5px; border-color: var(--line); background: rgba(246, 245, 241, 0.84); box-shadow: var(--shadow-1); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.menu-button { display: none; align-items: center; justify-content: center; flex-direction: column; gap: 6px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.menu-button span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: transform 0.35s ease, opacity 0.35s ease; }
+.menu-button-active span:first-child { transform: translateY(3.75px) rotate(45deg); }
+.menu-button-active span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; z-index: 900; padding: 105px 6% 40px; background: var(--paper); clip-path: inset(0% 0% 100% 0%); pointer-events: none; }
+.mobile-menu-open { pointer-events: auto; }
+.mobile-menu-header { display: flex; justify-content: space-between; padding-bottom: 20px; margin-bottom: 24px; border-bottom: 1px solid var(--line); color: var(--text-3); font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.14em; }
+.mobile-menu nav { display: flex; flex-direction: column; gap: 20px; }
+.mobile-menu a { display: flex; align-items: center; gap: 16px; color: var(--ink); text-decoration: none; font-size: clamp(2.5rem, 10vw, 4rem); font-weight: 650; letter-spacing: -0.04em; }
+.mobile-menu a span:first-child { color: var(--text-3); font-size: 0.7rem; letter-spacing: 0; }
+.mobile-menu-cta { width: fit-content; margin-top: 20px; padding: 14px 20px; border-radius: var(--r-pill); color: var(--ink); background: var(--accent); font-size: 1rem !important; letter-spacing: normal !important; }
+.mobile-menu-cta span { color: var(--ink) !important; font-size: 1rem !important; }
+@media (max-width: 900px) { .navbar-links, .navbar-cta { display: none; } .menu-button { display: flex; } }
+@media (max-width: 600px) { .navbar { padding: 18px 0; } .navbar-container { width: 90%; padding-left: 10px; } .navbar-logo { font-size: 0.82rem; } .navbar-scrolled { padding: 12px 0; } }
