@@ -1,16 +1,43 @@
- # SONIQ AERO X1
+# SONIQ AERO X1
 
- Premium product landing page for the SONIQ AERO X1 wireless headphones. The project combines an interactive Three.js headphone model, editorial product storytelling, GSAP scroll animation, adaptive ANC controls, product finish selection, sound interaction, and responsive purchasing UI.
+<p align="center">
+	<strong>A premium interactive product experience for next-generation wireless headphones.</strong>
+</p>
 
- ## Overview
+<p align="center">
+	<a href="https://soniq-aero-x1-web.vercel.app/">View Live Demo</a>
+	&nbsp;&middot;&nbsp;
+	<a href="https://github.com/danish-devx">Author Profile</a>
+</p>
 
- SONIQ AERO X1 is a frontend-only React experience designed around three ideas:
+<p align="center">
+	<a href="https://soniq-aero-x1-web.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" alt="Live demo on Vercel"></a>
+	<img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19">
+	<img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 8">
+	<img src="https://img.shields.io/badge/Three.js-3D%20Experience-black?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js 3D experience">
+</p>
 
- - Immersive product presentation through a custom React Three Fiber model.
- - Quiet, editorial visual design with warm paper surfaces, dark technical panels, and a lime brand accent.
- - Small but meaningful interactions: colorway selection, ANC modes, sound profile playback, FAQ accordion, newsletter state, cursor feedback, and purchase confirmation.
+> A frontend-only headphone launch experience built to make product storytelling feel tactile, cinematic, and responsive.
 
- ## Tech Stack
+## Overview
+
+SONIQ AERO X1 is a React product showcase designed around three ideas:
+
+- Immersive product presentation through a custom React Three Fiber model.
+- Quiet editorial visual design with warm paper surfaces, dark technical panels, and a lime brand accent.
+- Small but meaningful interactions: colorway selection, ANC modes, sound profile playback, FAQ accordion, newsletter state, cursor feedback, and purchase confirmation.
+
+## Experience Highlights
+
+| Area | What is included |
+| --- | --- |
+| Product reveal | Interactive 3D headphone model with auto-rotation, orbit controls, lighting, and three finishes |
+| Sound | User-initiated Web Audio profile with animated playback state |
+| Adaptive ANC | Silent, Aware, and Transparency modes with responsive noise-field feedback |
+| Purchase flow | Finish selection, synchronized product details, and a keyboard-friendly confirmation modal |
+| Interface | Responsive navigation, reduced-motion support, FAQ accordion, newsletter state, and custom cursor |
+
+## Tech Stack
 
  - React 19
  - Vite
